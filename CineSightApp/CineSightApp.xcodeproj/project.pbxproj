@@ -17,6 +17,8 @@
 		49168BAC2ACEFB5200D2D819 /* CineSightAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49168BAB2ACEFB5200D2D819 /* CineSightAppTests.swift */; };
 		49168BB62ACEFB5200D2D819 /* CineSightAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49168BB52ACEFB5200D2D819 /* CineSightAppUITests.swift */; };
 		49168BB82ACEFB5200D2D819 /* CineSightAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49168BB72ACEFB5200D2D819 /* CineSightAppUITestsLaunchTests.swift */; };
+		49168BC52ACEFE9A00D2D819 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49168BC42ACEFE9A00D2D819 /* Movie.swift */; };
+		49168BC72ACEFED300D2D819 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49168BC62ACEFED300D2D819 /* MovieService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		49168BB12ACEFB5200D2D819 /* CineSightAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CineSightAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49168BB52ACEFB5200D2D819 /* CineSightAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CineSightAppUITests.swift; sourceTree = "<group>"; };
 		49168BB72ACEFB5200D2D819 /* CineSightAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CineSightAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		49168BC42ACEFE9A00D2D819 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		49168BC62ACEFED300D2D819 /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,8 @@
 				49168B9C2ACEFB5000D2D819 /* ContentView.swift */,
 				49168B9E2ACEFB5200D2D819 /* Assets.xcassets */,
 				49168BA02ACEFB5200D2D819 /* Preview Content */,
+				49168BC42ACEFE9A00D2D819 /* Movie.swift */,
+				49168BC62ACEFED300D2D819 /* MovieService.swift */,
 			);
 			path = CineSightApp;
 			sourceTree = "<group>";
@@ -279,6 +285,8 @@
 				02661DF62ACF005400461E91 /* DetailsView.swift in Sources */,
 				02661DF42ACF004800461E91 /* SearchView.swift in Sources */,
 				49168B9B2ACEFB5000D2D819 /* CineSightAppApp.swift in Sources */,
+				49168BC72ACEFED300D2D819 /* MovieService.swift in Sources */,
+				49168BC52ACEFE9A00D2D819 /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

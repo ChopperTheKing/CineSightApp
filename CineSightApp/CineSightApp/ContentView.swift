@@ -8,14 +8,35 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var movies: [Movie] = []
+    @State private var isLoading = true
+    @State private var error: Error?
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            if isLoading {
+                Text("Loading...")
+            } else if let error = error {
+                Text("Error: \(error.localizedDescription)")
+            } else {
+                List(movies, id: \.title) { movie in
+                    Text(movie.title)
+                    Text(movie.release_date)
+                    Text(movie.overview)
+                }
+            }
         }
-        .padding()
+        .onAppear {
+            MovieService().searchMovies(query: "Inception") { result in
+                self.isLoading = false
+                switch result {
+                case .success(let fetchedMovies):
+                    self.movies = fetchedMovies
+                case .failure(let fetchError):
+                    self.error = fetchError
+                }
+            }
+        }
     }
 }
 
