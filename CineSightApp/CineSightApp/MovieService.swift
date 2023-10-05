@@ -33,6 +33,6 @@ class MovieService {
     }
 }
 
-struct SearchResponse: Codable {
+struct SearchResponse: Decodable {
     var results: [Movie]
 }
