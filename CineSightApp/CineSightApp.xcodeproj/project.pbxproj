@@ -10,7 +10,7 @@
 		02661DF42ACF004800461E91 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02661DF32ACF004800461E91 /* SearchView.swift */; };
 		02661DF62ACF005400461E91 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02661DF52ACF005400461E91 /* DetailsView.swift */; };
 		02661DF82ACF006000461E91 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02661DF72ACF006000461E91 /* FavoritesView.swift */; };
-		49168B9B2ACEFB5000D2D819 /* CineSightAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49168B9A2ACEFB5000D2D819 /* CineSightAppApp.swift */; };
+		49168B9B2ACEFB5000D2D819 /* CineSightApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49168B9A2ACEFB5000D2D819 /* CineSightApp.swift */; };
 		49168B9D2ACEFB5000D2D819 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49168B9C2ACEFB5000D2D819 /* ContentView.swift */; };
 		49168B9F2ACEFB5200D2D819 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49168B9E2ACEFB5200D2D819 /* Assets.xcassets */; };
 		49168BA22ACEFB5200D2D819 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49168BA12ACEFB5200D2D819 /* Preview Assets.xcassets */; };
@@ -43,7 +43,7 @@
 		02661DF52ACF005400461E91 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		02661DF72ACF006000461E91 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		49168B972ACEFB5000D2D819 /* CineSightApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CineSightApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		49168B9A2ACEFB5000D2D819 /* CineSightAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CineSightAppApp.swift; sourceTree = "<group>"; };
+		49168B9A2ACEFB5000D2D819 /* CineSightApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CineSightApp.swift; sourceTree = "<group>"; };
 		49168B9C2ACEFB5000D2D819 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		49168B9E2ACEFB5200D2D819 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49168BA12ACEFB5200D2D819 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -115,7 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				02661DF22ACF003600461E91 /* View */,
-				49168B9A2ACEFB5000D2D819 /* CineSightAppApp.swift */,
+				49168B9A2ACEFB5000D2D819 /* CineSightApp.swift */,
 				49168B9C2ACEFB5000D2D819 /* ContentView.swift */,
 				49168B9E2ACEFB5200D2D819 /* Assets.xcassets */,
 				49168BA02ACEFB5200D2D819 /* Preview Content */,
@@ -284,7 +284,7 @@
 				49168B9D2ACEFB5000D2D819 /* ContentView.swift in Sources */,
 				02661DF62ACF005400461E91 /* DetailsView.swift in Sources */,
 				02661DF42ACF004800461E91 /* SearchView.swift in Sources */,
-				49168B9B2ACEFB5000D2D819 /* CineSightAppApp.swift in Sources */,
+				49168B9B2ACEFB5000D2D819 /* CineSightApp.swift in Sources */,
 				49168BC72ACEFED300D2D819 /* MovieService.swift in Sources */,
 				49168BC52ACEFE9A00D2D819 /* Movie.swift in Sources */,
 			);
