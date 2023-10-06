@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HeaderView: View {
+    @Environment(\.managedObjectContext) var managedObjectContext
     var title: String
     
     var body: some View {
@@ -74,15 +75,20 @@ struct SearchBar: View {
 }
 
 struct SearchView: View {
-    @State private var searchText = ""
+    @ObservedObject var viewModel = MovieViewModel()
     
     var body: some View {
         VStack {
             HeaderView(title: "SEARCH MOVIES")
-            SearchBar(text: $searchText)
-            Spacer()
-            Text("Search Movies")
-            Spacer()
+            SearchBar(text: $viewModel.searchText)
+            
+            if viewModel.isLoading {
+                ProgressView("Loading...")
+            } else {
+                List(viewModel.movies, id: \.title) { movie in
+                    Text(movie.title)
+                }
+            }
         }
         .padding(.top)
     }

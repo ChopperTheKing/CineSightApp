@@ -11,7 +11,6 @@
 		02661DF62ACF005400461E91 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02661DF52ACF005400461E91 /* DetailsView.swift */; };
 		02661DF82ACF006000461E91 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02661DF72ACF006000461E91 /* FavoritesView.swift */; };
 		49168B9B2ACEFB5000D2D819 /* CineSightApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49168B9A2ACEFB5000D2D819 /* CineSightApp.swift */; };
-		49168B9D2ACEFB5000D2D819 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49168B9C2ACEFB5000D2D819 /* ContentView.swift */; };
 		49168B9F2ACEFB5200D2D819 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49168B9E2ACEFB5200D2D819 /* Assets.xcassets */; };
 		49168BA22ACEFB5200D2D819 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49168BA12ACEFB5200D2D819 /* Preview Assets.xcassets */; };
 		49168BAC2ACEFB5200D2D819 /* CineSightAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49168BAB2ACEFB5200D2D819 /* CineSightAppTests.swift */; };
@@ -19,6 +18,9 @@
 		49168BB82ACEFB5200D2D819 /* CineSightAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49168BB72ACEFB5200D2D819 /* CineSightAppUITestsLaunchTests.swift */; };
 		49168BC52ACEFE9A00D2D819 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49168BC42ACEFE9A00D2D819 /* Movie.swift */; };
 		49168BC72ACEFED300D2D819 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49168BC62ACEFED300D2D819 /* MovieService.swift */; };
+		49168BC92AD0518200D2D819 /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49168BC82AD0518200D2D819 /* MovieViewModel.swift */; };
+		49168BCC2AD054ED00D2D819 /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 49168BCA2AD054ED00D2D819 /* CoreData.xcdatamodeld */; };
+		49168BCE2AD0552C00D2D819 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49168BCD2AD0552C00D2D819 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +46,6 @@
 		02661DF72ACF006000461E91 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		49168B972ACEFB5000D2D819 /* CineSightApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CineSightApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49168B9A2ACEFB5000D2D819 /* CineSightApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CineSightApp.swift; sourceTree = "<group>"; };
-		49168B9C2ACEFB5000D2D819 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		49168B9E2ACEFB5200D2D819 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49168BA12ACEFB5200D2D819 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		49168BA72ACEFB5200D2D819 /* CineSightAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CineSightAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +55,9 @@
 		49168BB72ACEFB5200D2D819 /* CineSightAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CineSightAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		49168BC42ACEFE9A00D2D819 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		49168BC62ACEFED300D2D819 /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
+		49168BC82AD0518200D2D819 /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
+		49168BCB2AD054ED00D2D819 /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
+		49168BCD2AD0552C00D2D819 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,11 +120,13 @@
 			children = (
 				02661DF22ACF003600461E91 /* View */,
 				49168B9A2ACEFB5000D2D819 /* CineSightApp.swift */,
-				49168B9C2ACEFB5000D2D819 /* ContentView.swift */,
 				49168B9E2ACEFB5200D2D819 /* Assets.xcassets */,
 				49168BA02ACEFB5200D2D819 /* Preview Content */,
 				49168BC42ACEFE9A00D2D819 /* Movie.swift */,
 				49168BC62ACEFED300D2D819 /* MovieService.swift */,
+				49168BC82AD0518200D2D819 /* MovieViewModel.swift */,
+				49168BCA2AD054ED00D2D819 /* CoreData.xcdatamodeld */,
+				49168BCD2AD0552C00D2D819 /* AppDelegate.swift */,
 			);
 			path = CineSightApp;
 			sourceTree = "<group>";
@@ -280,9 +286,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49168BCC2AD054ED00D2D819 /* CoreData.xcdatamodeld in Sources */,
 				02661DF82ACF006000461E91 /* FavoritesView.swift in Sources */,
-				49168B9D2ACEFB5000D2D819 /* ContentView.swift in Sources */,
 				02661DF62ACF005400461E91 /* DetailsView.swift in Sources */,
+				49168BCE2AD0552C00D2D819 /* AppDelegate.swift in Sources */,
+				49168BC92AD0518200D2D819 /* MovieViewModel.swift in Sources */,
 				02661DF42ACF004800461E91 /* SearchView.swift in Sources */,
 				49168B9B2ACEFB5000D2D819 /* CineSightApp.swift in Sources */,
 				49168BC72ACEFED300D2D819 /* MovieService.swift in Sources */,
@@ -610,6 +618,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		49168BCA2AD054ED00D2D819 /* CoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				49168BCB2AD054ED00D2D819 /* CoreData.xcdatamodel */,
+			);
+			currentVersion = 49168BCB2AD054ED00D2D819 /* CoreData.xcdatamodel */;
+			path = CoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 49168B8F2ACEFB5000D2D819 /* Project object */;
 }
