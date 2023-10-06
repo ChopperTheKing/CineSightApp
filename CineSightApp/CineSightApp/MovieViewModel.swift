@@ -10,12 +10,22 @@ import SwiftUI
 import Combine
 
 class MovieViewModel: ObservableObject {
+    @Published var apiError: Error?
     @Published var movies: [Movie] = []
     @Published var isLoading: Bool = false
     @Published var error: Error?
+    @Published var showErrorAlert: Bool = false
     @Published var searchText: String = "" {
         didSet {
             searchMovies()
+        }
+    }
+    
+    func handleAPIError() {
+        if self.error != nil {
+            self.showErrorAlert = true
+        } else {
+            self.showErrorAlert = false
         }
     }
     
@@ -29,6 +39,7 @@ class MovieViewModel: ObservableObject {
                     self.isLoading = false
                 case .failure(let error):
                     self.error = error
+                    self.handleAPIError()
                     self.isLoading = false
                 }
             }

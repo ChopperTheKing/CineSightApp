@@ -78,21 +78,29 @@ struct SearchView: View {
     @ObservedObject var viewModel = MovieViewModel()
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading, spacing: 10) {
             HeaderView(title: "SEARCH MOVIES")
             SearchBar(text: $viewModel.searchText)
             
-            if viewModel.isLoading {
-                ProgressView("Loading...")
-            } else {
-                List(viewModel.movies, id: \.title) { movie in
-                    Text(movie.title)
+            VStack {
+                if viewModel.isLoading {
+                    ProgressView("Loading...")
+                } else {
+                    List(viewModel.movies, id: \.title) { movie in
+                        Text(movie.title)
+                    }
                 }
             }
         }
         .padding(.top)
+        .alert(isPresented: $viewModel.showErrorAlert) {  // Alert
+            Alert(title: Text("An Error Occurred"),
+                  message: Text(viewModel.error?.localizedDescription ?? "Unknown error"),
+                  dismissButton: .default(Text("OK")))
+        }
     }
 }
+
 
 struct SearchView_Preview: PreviewProvider {
     static var previews: some View {
