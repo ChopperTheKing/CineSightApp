@@ -9,7 +9,7 @@ import Foundation
 
 class MovieService {
     func searchMovies(query: String, completion: @escaping (Result<[Movie], Error>) -> Void) {
-        let urlString = "https://api.themoviedb.org/3/search/movie?api_key=28e9425ecdb2044c235d4eec5419342e&query=\(query)"
+        let urlString = "https://api.themoviedb.org/3/search/movie?api_key=INVALID_API_KEY&query=\(query)"
         if let url = URL(string: urlString) {
             URLSession.shared.dataTask(with: url) { data, response, error in
                 DispatchQueue.main.async {
