@@ -12,7 +12,7 @@ import CoreData
 
 struct FavoriteMovieView: View {
     @Environment(\.managedObjectContext) var managedObjectContext
-    @FetchRequest(entity: FavoriteMovie.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \FavoriteMovie.title, ascending: true)]) var favoriteMovies: FetchedResults<FavoriteMovie>
+    @FetchRequest(entity: FavoriteMovie.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \FavoriteMovie.title, ascending: true)]) var favoriteMovies: FetchedResults<FavoriteMovieView>
 
     @State private var newMovieTitle = ""
     
@@ -38,7 +38,7 @@ struct FavoriteMovieView: View {
     }
     
     func addMovie() {
-        let favoriteMovie = FavoriteMovie(context: managedObjectContext)
+        let favoriteMovie = FavoriteMovieView(context: managedObjectContext)
         favoriteMovie.id = UUID()
         favoriteMovie.title = newMovieTitle
         
