@@ -10,6 +10,6 @@ import Foundation
 struct Movie: Decodable {
     var title: String
     var release_date: String
-    var overview: String
+    var overview: String?
     var poster_path: String?
 }

@@ -1,36 +1,87 @@
-//
-//  CineSightAppTests.swift
-//  CineSightAppTests
-//
-//  Created by Ronnie Kissos on 10/5/23.
-//
-
 import XCTest
 @testable import CineSightApp
 
-final class CineSightAppTests: XCTestCase {
+class MovieServiceTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+    // Create a mock URLProtocol
+    class MockURLProtocol: URLProtocol {
+        override class func canInit(with request: URLRequest) -> Bool {
+            return true
+        }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+        override class func canonicalRequest(for request: URLRequest) -> URLRequest {
+            return request
+        }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
+        override func startLoading() {
+            
+            let testData = """
+                {
+                    "results": [
+                        {
+                            "title": "Star",
+                            "release_date": "2001-06-01",
+                            
+                        },
+                        {
+                            "title": "Star!",
+                            "release_date": "1968-07-18",
+                            
+                        }
+                    ]
+                }
+                """.data(using: .utf8)
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+            let response = HTTPURLResponse(url: request.url!, statusCode: 200, httpVersion: nil, headerFields: nil)
+
+            client?.urlProtocol(self, didReceive: response!, cacheStoragePolicy: .notAllowed)
+            client?.urlProtocol(self, didLoad: testData!)
+            client?.urlProtocolDidFinishLoading(self)
+        }
+
+        override func stopLoading() {
+            // Nothing to do here
         }
     }
 
+    override func setUp() {
+        super.setUp()
+       
+        URLProtocol.registerClass(MockURLProtocol.self)
+    }
+
+    override func tearDown() {
+        super.tearDown()
+     
+        URLProtocol.unregisterClass(MockURLProtocol.self)
+    }
+
+    func testSearchMovies() {
+       
+        let movieService = MovieService()
+
+        
+        let expectation = self.expectation(description: "Search Movies")
+
+       
+        movieService.searchMovies(query: "Test") { result in
+            switch result {
+            case .success(let movies):
+                XCTAssertEqual(movies.count, 2)
+                XCTAssertEqual(movies[0].title, "Star")
+                XCTAssertEqual(movies[1].title, "Star!")
+                XCTAssertEqual(movies[0].release_date, "2001-06-01")
+                XCTAssertEqual(movies[1].release_date, "1968-07-18")
+            case .failure(let error):
+                XCTFail("Search should succeed, but failed with error: \(error)")
+            }
+            expectation.fulfill()
+        }
+
+        // Wait for the expectation to be fulfilled
+        waitForExpectations(timeout: 5, handler: nil)
+    }
 }
+
+
+
