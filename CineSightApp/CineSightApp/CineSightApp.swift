@@ -22,7 +22,7 @@ struct MovieLookupApp: App {
                     .tabItem {
                         Image(systemName: "bookmark.fill")
                     }
-                FavoritesView()
+                FavoriteMovieView()
                     .tabItem {
                         Image(systemName: "heart.fill")
                     }
